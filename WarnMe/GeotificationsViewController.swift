@@ -8,19 +8,26 @@
 
 import UIKit
 import MapKit
-
+import CoreLocation // Setting Up a Location Manager and Permissions
 let kSavedItemsKey = "savedItems"
 
-class GeotificationsViewController: UIViewController, AddGeotificationsViewControllerDelegate, MKMapViewDelegate {
+class GeotificationsViewController: UIViewController, AddGeotificationsViewControllerDelegate, MKMapViewDelegate, CLLocationManagerDelegate {
 
   @IBOutlet weak var mapView: MKMapView!
 
   var geotifications = [Geotification]()
-
+    
+  let locationManager = CLLocationManager() // Setting Up a Location Manager and Permissions
+    
   override func viewDidLoad() {
     super.viewDidLoad()
+    // 1
+    locationManager.delegate = self
+    // 2
+    locationManager.requestAlwaysAuthorization() // Make sure that the keys in PList file has no spaces in source code.
+    // 3
     loadAllGeotifications()
-  }
+    }
 
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "addGeotification" {
@@ -169,4 +176,8 @@ class GeotificationsViewController: UIViewController, AddGeotificationsViewContr
   @IBAction func zoomToCurrentLocation(sender: AnyObject) {
     zoomToUserLocationInMapView(mapView)
   }
+    
+    
+    
+    
 }
