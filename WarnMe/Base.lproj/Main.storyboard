@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-586" y="505"/>
         </scene>
-        <!--Geotifications (0)-->
+        <!--PitStops (0)-->
         <scene sceneID="AvV-zX-dVo">
             <objects>
                 <viewController id="BKh-eG-7lL" customClass="GeotificationsViewController" customModule="WarnMe" customModuleProvider="target" sceneMemberID="viewController">
@@ -53,7 +53,7 @@
                             <constraint firstItem="a2j-Ux-pjW" firstAttribute="top" secondItem="f6L-Pt-Pcg" secondAttribute="bottom" id="lGa-1L-VS3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Geotifications (0)" id="S62-MW-2Hb">
+                    <navigationItem key="navigationItem" title="PitStops (0)" id="S62-MW-2Hb">
                         <barButtonItem key="leftBarButtonItem" image="CurrentLocation" id="9Je-lG-q5I">
                             <connections>
                                 <action selector="zoomToCurrentLocation:" destination="BKh-eG-7lL" id="RfV-gQ-8Fb"/>
@@ -90,7 +90,7 @@
             </objects>
             <point key="canvasLocation" x="369" y="505"/>
         </scene>
-        <!--Add Geotification-->
+        <!--Add PitStop-->
         <scene sceneID="fwf-gc-4UZ">
             <objects>
                 <tableViewController id="1Rl-6S-YE5" customClass="AddGeotificationViewController" customModule="WarnMe" customModuleProvider="target" sceneMemberID="viewController">
@@ -127,7 +127,7 @@
                                                         <outlet property="delegate" destination="eKv-kF-Psi" id="XmW-zk-eYL"/>
                                                     </connections>
                                                 </mapView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="AddPin" translatesAutoresizingMaskIntoConstraints="NO" id="fWI-Hc-0Rs">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AddPin" translatesAutoresizingMaskIntoConstraints="NO" id="fWI-Hc-0Rs">
                                                     <rect key="frame" x="170" y="132" width="75" height="75"/>
                                                     <animations/>
                                                 </imageView>
@@ -203,7 +203,7 @@
                                                     <rect key="frame" x="14" y="13" width="36" height="18"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -227,7 +227,7 @@
                             <outlet property="delegate" destination="1Rl-6S-YE5" id="qiI-cb-YAf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Add Geotification" id="rA4-Nq-mxx">
+                    <navigationItem key="navigationItem" title="Add PitStop" id="rA4-Nq-mxx">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="Ei5-pZ-ViW">
                             <connections>
                                 <action selector="onCancel:" destination="1Rl-6S-YE5" id="qqp-GB-COz"/>
@@ -259,7 +259,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AddPin" width="15" height="15"/>
+        <image name="AddPin" width="75" height="75"/>
         <image name="CurrentLocation" width="15" height="15"/>
     </resources>
 </document>
